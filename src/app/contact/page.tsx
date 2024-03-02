@@ -5,7 +5,6 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -14,8 +13,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
-import { toast } from "sonner";
-import { Meteors } from "@/components/ui/meteors";
+
 import { BackgroundBeams } from "@/components/ui/background-beams";
 
 const formSchema = z.object({
@@ -31,7 +29,7 @@ const formSchema = z.object({
     }),
 });
 
-function page() {
+function Page() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -157,4 +155,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;
