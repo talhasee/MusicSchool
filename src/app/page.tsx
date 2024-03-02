@@ -6,20 +6,20 @@ import Navbar from "@/components/Navbar";
 import MusicSchoolTestimonial from "@/components/TestimonialCard";
 import UpcomingWebinars from "@/components/UpcomingWebinars";
 import WhyChooseUs from "@/components/WhyChooseUs";
+import { TracingBeam } from "@/components/ui/tracing-beam";
 import Image from "next/image";
 
 export default function Home() {
   return (
     <>
-      <main>
-        <Navbar/>
-        <HeroSection/>
-        <FeaturedCourses/>
-        <WhyChooseUs/>
-        <MusicSchoolTestimonial/>
-        <UpcomingWebinars/>
-        <Instructors/>
-        <Footer/>
+      <main className="min-h-screen px-0 bg-black/[0.96] antialiased bg-grid-white/[0.02]">
+          <HeroSection />
+          <FeaturedCourses />
+          <WhyChooseUs />
+          <MusicSchoolTestimonial />
+          <UpcomingWebinars />
+          <Instructors />
+          <Footer />
       </main>
     </>
   );
